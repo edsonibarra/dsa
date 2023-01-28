@@ -111,7 +111,7 @@ class LinkedList:
 
     def merge(self, second_linked_list):
         p1 = self.head
-        p2 = second_linked_list
+        p2 = second_linked_list.head
 
         if not p1:
             return p2
