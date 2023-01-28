@@ -1,3 +1,4 @@
+import random
 from linkedlist import LinkedList
 
 
@@ -38,7 +39,30 @@ def main():
     linked_list.reverse()
     linked_list.print_list()
 
+    # Test merge method
+
+    print("\n\tTesting merge method\t\n")
+    ll1 = LinkedList()
+    ll2 = LinkedList()
+
+    ll1.append(-100)
+    ll1.append(100)
+    ll1.append(300)
+    ll1.append(400)
+
+    ll2.append(1)
+    ll2.append(234)
+    ll2.append(543)
+    ll2.append(5533)
+    ll2.append(44000)
+
+    ll1.print_list()
+    ll2.print_list()
     
+    # merge l2 into l1
+    print("Merging ll2 into ll1")
+    ll1.merge(ll2)
+    ll1.print_list()
 
 if __name__ == "__main__":
     main()
