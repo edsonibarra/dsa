@@ -98,3 +98,14 @@ class LinkedList:
             prev = current_node
             current_node = next_node
         self.head = prev
+
+    def __len__(self):
+        count = 0
+        if self.head is None:
+            return count
+        current_node = self.head
+        while current_node:
+            count += 1
+            current_node = current_node.next 
+        return count
+    
