@@ -136,4 +136,9 @@ class LinkedList:
                 smallest_number.next = p2
                 smallest_number = p2
                 p2 = smallest_number.next
+        
+        if not p1:
+            smallest_number.next = p2
+        if not p2:
+            smallest_number.next = p1
         self.head = new_head
