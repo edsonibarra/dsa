@@ -87,3 +87,14 @@ class LinkedList:
             return
         else:
             print(f'Node at pos {pos} not found')
+
+    def reverse(self):
+        current_node = self.head
+        prev = None
+
+        while current_node:
+            next_node = current_node.next
+            current_node.next = prev
+            prev = current_node
+            current_node = next_node
+        self.head = prev
