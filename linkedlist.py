@@ -142,3 +142,17 @@ class LinkedList:
         if not p2:
             smallest_number.next = p1
         self.head = new_head
+
+    def remove_duplicates(self):
+        current_node = self.head
+        prev = None
+        seen_values = dict()
+
+        while current_node:
+            if current_node.value in seen_values:
+                prev.next = current_node.next
+                current_node = None
+            else:
+                seen_values[current_node.value] = True
+                prev = current_node
+            current_node = prev.next
