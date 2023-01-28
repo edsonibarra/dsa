@@ -108,4 +108,32 @@ class LinkedList:
             count += 1
             current_node = current_node.next 
         return count
-    
+
+    def merge(self, second_linked_list):
+        p1 = self.head
+        p2 = second_linked_list
+
+        if not p1:
+            return p2
+        if not p2:
+            return p1
+        
+        if p1 and p2:
+            if p1.data <= p2.data:
+                smallest_number = p1
+                p1 = smallest_number.next
+            else:
+                smallest_number = p2
+                p2 = smallest_number.next
+            new_head = smallest_number
+        
+        while p1 and p2:
+            if p1.data <= p2.data:
+                smallest_number.next = p1
+                smallest_number = p1
+                p1 = smallest_number.next
+            else:
+                smallest_number.next = p2
+                smallest_number = p2
+                p2 = smallest_number.next
+        self.head = new_head
