@@ -33,7 +33,7 @@ class LinkedList:
         
         current_node = self.head
         while current_node:
-            print(current_node.value,end='->')
+            print(f'[{current_node.value}]',end='->')
             current_node = current_node.next
         
         print("None")
