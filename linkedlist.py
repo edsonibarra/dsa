@@ -78,6 +78,7 @@ class LinkedList:
         
         while current_node and count != pos:
             count += 1
+            prev = current_node
             current_node = current_node.next
         
         if current_node:
