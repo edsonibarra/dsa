@@ -23,3 +23,17 @@ class LinkedList:
         current_node = self.head
         new_node.next = current_node
         self.head = new_node
+
+    def print_list(self, value):
+        if self.head is None:
+            print('Empty List')
+            return
+        
+        print("######Priting Linked List#######")
+        
+        current_node = self.head
+        while current_node:
+            print(current_node.value,end='->')
+            current_node = current_node.next
+        
+        print("None")
