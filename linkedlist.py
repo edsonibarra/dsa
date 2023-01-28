@@ -61,3 +61,28 @@ class LinkedList:
             return
         else:
             print(f'Node with value {value} not found')
+
+    def delete_by_pos(self, pos):
+        if self.head is None:
+            print('No delete action on empty List')
+            return
+        
+        current_node = self.head
+        prev = None
+        count = 0
+
+        if pos == count:
+            self.head = current_node.next
+            current_node = None
+            return
+        
+        while current_node and count != pos:
+            count += 1
+            current_node = current_node.next
+        
+        if current_node:
+            prev.next = current_node.next
+            current_node = None
+            return
+        else:
+            print(f'Node at pos {pos} not found')
