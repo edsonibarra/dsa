@@ -119,7 +119,7 @@ class LinkedList:
             return p1
         
         if p1 and p2:
-            if p1.data <= p2.data:
+            if p1.value <= p2.value:
                 smallest_number = p1
                 p1 = smallest_number.next
             else:
@@ -128,7 +128,7 @@ class LinkedList:
             new_head = smallest_number
         
         while p1 and p2:
-            if p1.data <= p2.data:
+            if p1.value <= p2.value:
                 smallest_number.next = p1
                 smallest_number = p1
                 p1 = smallest_number.next
