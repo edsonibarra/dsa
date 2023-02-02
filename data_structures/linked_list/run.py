@@ -67,9 +67,9 @@ def main():
     # Nth to last node testing
     print("\n\tNth to last node method\t\n")
     ll1.print_list()
-    ll1.print_nth_from_last(2)
-    ll1.print_nth_from_last(1)
-    ll1.print_nth_from_last(0)
+    ll1.print_nth_from_last(2,1)
+    ll1.print_nth_from_last(1,1)
+    ll1.print_nth_from_last(0,1)
 
 if __name__ == "__main__":
     main()
