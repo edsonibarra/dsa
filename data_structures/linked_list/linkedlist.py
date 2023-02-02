@@ -29,7 +29,7 @@ class LinkedList:
             print('Empty List')
             return
         
-        print("######Priting Linked List#######")
+        print("------ Priting Linked List ------\n")
         
         current_node = self.head
         while current_node:
