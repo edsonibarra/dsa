@@ -156,3 +156,17 @@ class LinkedList:
                 seen_values[current_node.value] = True
                 prev = current_node
             current_node = prev.next
+
+    def print_nth_from_last(self, n):
+        total_len = len(self)
+
+        current_node = self.head
+        while current_node:
+            if total_len == n:
+                print(f"{n}th to last node = {current_node.value}")
+                return
+            total_len -= 1
+            current_node = current_node.next
+        
+        if current_node is None:
+            return
