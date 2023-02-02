@@ -64,5 +64,12 @@ def main():
     ll1.merge(ll2)
     ll1.print_list()
 
+    # Nth to last node testing
+    print("\n\tNth to last node method\t\n")
+    ll1.print_list()
+    ll1.print_nth_from_last(2)
+    ll1.print_nth_from_last(1)
+    ll1.print_nth_from_last(0)
+
 if __name__ == "__main__":
     main()
