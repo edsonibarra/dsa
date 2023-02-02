@@ -157,16 +157,20 @@ class LinkedList:
                 prev = current_node
             current_node = prev.next
 
-    def print_nth_from_last(self, n):
-        total_len = len(self)
+    def print_nth_from_last(self, n, method):
+        if method == 1:
+            total_len = len(self)
 
-        current_node = self.head
-        while current_node:
-            if total_len == n:
-                print(f"{n}th to last node = {current_node.value}")
+            current_node = self.head
+            while current_node:
+                if total_len == n:
+                    print(f"{n}th to last node = {current_node.value}")
+                    return
+                total_len -= 1
+                current_node = current_node.next
+            
+            if current_node is None:
                 return
-            total_len -= 1
-            current_node = current_node.next
-        
-        if current_node is None:
-            return
+        elif method == 2:
+            pass
+
