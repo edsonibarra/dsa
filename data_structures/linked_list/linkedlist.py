@@ -174,3 +174,11 @@ class LinkedList:
         elif method == 2:
             pass
 
+    def count_occurrences(self, data):
+        count = 0
+        current_node = self.head
+        while current_node:
+            if current_node.value == data:
+                count += 1
+            current_node = current_node.next
+        return count
